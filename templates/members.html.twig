@@ -1,0 +1,40 @@
+{% extends '_base.html.twig' %}
+
+{# ----------------------------------------#}
+{% block title %}
+    Member page
+{% endblock %}
+
+{# ----------------------------------------#}
+{% block membersNavStyle %}current_page{% endblock %}
+
+{# ----------------------------------------#}
+{% block main %}
+
+    <h2>Members List</h2>
+
+    <table>
+        <tr>
+            <th>Student ID</th>
+            <th>Current Belt Grade</th>
+            <th>Current Status</th>
+            <th>Next Grade</th>
+            <th>Next Belt Grade Syllabus</th>
+            <th>Required Status</th>
+         </tr>
+
+    {% for member in members %}
+
+        <tr>
+            <td>{{member.studentID  }}</td>
+            <td>{{member.currrentBeltGrade  }}</td>
+            <td>{{member.currentStatus  }}</td>
+            <td>{{member.nextGrade  }}</td>
+            <td>{{memner.nextBeltGradeSyllabus }}</td>
+            <td>{{member.requireStatus  }}</td>
+        </tr>
+
+
+{% endfor %}
+    </table>
+{% endblock %}

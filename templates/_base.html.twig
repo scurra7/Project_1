@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MGW - {% block title %}{% endblock %}</title>
+    <style>
+        @import "css/style.css";
+        @import "css/nav.css";
+    </style>
+</head>
+<body>
+
+<nav>
+    <ul>
+        <li>
+            <a href="/"class="{% block indexNavStyle %}{% endblock %}">Home page</a>
+        </li>
+        <li>
+            <a href="/members" class="{% block membersNavStyle %}{% endblock %}">Members page</a>
+        </li>
+        <li>
+            <a href="/days" class="{% block daysNavStyle %}{% endblock %}">Days</a>
+        </li>
+    </ul>
+</nav>
+
+
+{% block main %}
+{% endblock %}
+
+<footer>
+    2015 &copy; Matt Smith solulutions unlimited
+</footer>
+</body>
+</html>

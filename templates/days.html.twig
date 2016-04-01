@@ -1,0 +1,38 @@
+{% extends '_base.html.twig' %}
+
+{# ----------------------------------------#}
+{% block title %}
+    page - days of week
+{% endblock %}
+
+{# ----------------------------------------#}
+{% block daysNavStyle %}current_page{% endblock %}
+
+{# ----------------------------------------#}
+{% block main %}
+
+    {% if days %}
+
+        {% set num_days = days | length %}
+
+        <p>
+            there are {{ num_days }} days in the week
+        </p>
+
+        <ul>
+            {% for day in days %}
+                <li>
+                    {{ day }}
+                </li>
+            {% endfor %}
+        </ul>
+
+    {% else %}
+
+        <p>
+            empty array - there are no days in the week!
+        </p>
+
+    {% endif %}
+
+{% endblock %}

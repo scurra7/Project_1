@@ -1,0 +1,20 @@
+{% extends '_base.html.twig' %}
+
+{# ----------------------------------------#}
+{% block title %}
+    Member page
+{% endblock %}
+
+{# ----------------------------------------#}
+{% block membersNavStyle %}current_page{% endblock %}
+
+{# ----------------------------------------#}
+{% block main %}
+
+    <a href="/logout">Logout</a>
+
+   <p>
+    This is admin {{ username }} !!!!!
+    </p>
+
+{% endblock %}
